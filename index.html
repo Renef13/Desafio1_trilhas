@@ -3,45 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Café feito com calma para acompanhar suas pausas.">
-  <title>Pausa Café | Sua pausa favorita</title>
+  <meta name="description" content="Cafés especiais e coisas gostosas para acompanhar sua pausa. Peça na Pausa Café.">
+  <title>Pausa Café — café bom, pausa melhor</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="topo">
     <a class="marca" href="#inicio" aria-label="Pausa Café, início"><span class="marca-simbolo">P</span> pausa<span>café</span></a>
-    <a class="atalho" href="#cardapio">Nosso cardápio <span aria-hidden="true">↘</span></a>
+    <nav aria-label="Navegação principal"><a href="#cardapio">Cardápio</a><a href="#sobre">Nossa casa</a></nav>
+    <button class="atalho" type="button" data-open-cart aria-label="Abrir sacola">Sacola <span class="contador" data-cart-count>0</span></button>
   </header>
 
   <main id="inicio">
     <section class="abertura" aria-labelledby="titulo-principal">
       <div class="abertura-texto">
-        <p class="etiqueta"><span class="ponto"></span> CAFÉ DE TODO DIA, FEITO COM CARINHO</p>
-        <h1 id="titulo-principal">Um respiro<br>no meio do <em>dia.</em></h1>
-        <p class="intro">Café passado na hora, receitas simples e aquele tempinho que faz bem. Escolha seu favorito e aproveite a pausa.</p>
-        <a class="botao-link" href="#cardapio">Conheça o cardápio <span aria-hidden="true">↓</span></a>
+        <p class="etiqueta"><span class="ponto"></span> CAFÉ BRASILEIRO, FEITO COM CALMA</p>
+        <h1 id="titulo-principal">Seu dia merece<br>uma pausa <em>boa.</em></h1>
+        <p class="intro">Café fresquinho, fornada do dia e um lugar gostoso para respirar. Escolha o que vai acompanhar o seu momento.</p>
+        <a class="botao-link" href="#cardapio">Ver o cardápio <span aria-hidden="true">↓</span></a>
+        <div class="abertura-notas"><span>★ 4,9 <small>feito com carinho</small></span><span>☕ Café 100% brasileiro</span></div>
       </div>
-      <div class="ilustracao" aria-hidden="true">
-        <div class="circulo circulo-grande"></div><div class="circulo circulo-pequeno"></div>
-        <div class="selo">feito<br>na hora <span>✳</span></div>
-        <div class="copo"><div class="copo-orelha"></div><div class="copo-corpo"><div class="cafe"></div><div class="vapor vapor-um"></div><div class="vapor vapor-dois"></div><span class="copo-marca">pausa<br><b>café</b></span></div><div class="pires"></div></div>
+      <div class="abertura-foto">
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=85" alt="Barista preparando café em uma cafeteria aconchegante">
+        <span class="foto-selo">feito<br>na hora</span>
+        <span class="foto-legenda">UM BOM CAFÉ MUDA O RITMO DO DIA.</span>
       </div>
-      <div class="abertura-rodape"><span>PEQUENOS RITUAIS, GRANDES PAUSAS</span><span>01 — 03</span></div>
     </section>
+
+    <section class="faixa" aria-label="Diferenciais da Pausa Café"><span>Grãos selecionados</span><i>✳</i><span>Receitas da casa</span><i>✳</i><span>Uma pausa sem pressa</span></section>
 
     <section class="cardapio" id="cardapio" aria-labelledby="titulo-cardapio">
-      <div class="cabecalho-cardapio"><div><p class="etiqueta">ESCOLHA O SEU MOMENTO</p><h2 id="titulo-cardapio">Nosso <em>cardápio</em></h2></div><p>Três favoritos para deixar<br>o seu dia mais gostoso.</p></div>
+      <div class="cabecalho-cardapio"><div><p class="etiqueta">FEITO AQUI, PEDIDO POR VOCÊ</p><h2 id="titulo-cardapio">Um carinho em forma de <em>cardápio.</em></h2></div><p>Preços em reais. Escolha seus favoritos e adicione à sacola.</p></div>
       <div class="produtos">
-        <article class="produto produto-cafe"><div class="produto-arte arte-xicara" aria-hidden="true"><span>01</span><div class="mini-xicara">☕</div></div><div class="produto-info"><div><h3>Café coado</h3><p>Grãos brasileiros, moídos na hora.</p></div><strong>R$ 8,00</strong></div></article>
-        <article class="produto produto-bolo"><div class="produto-arte arte-bolo" aria-hidden="true"><span>02</span><div class="mini-bolo">✳</div></div><div class="produto-info"><div><h3>Bolo de cenoura</h3><p>Com cobertura cremosa de chocolate.</p></div><strong>R$ 12,00</strong></div></article>
-        <article class="produto produto-pao"><div class="produto-arte arte-pao" aria-hidden="true"><span>03</span><div class="mini-pao">◒</div></div><div class="produto-info"><div><h3>Pão de queijo</h3><p>Assado na hora, quentinho e macio.</p></div><strong>R$ 6,00</strong></div></article>
+        <article class="produto"><div class="produto-foto"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=82" alt="Café coado servido em uma xícara" loading="lazy"><span>CAFÉS</span></div><div class="produto-info"><div><h3>Café coado</h3><p>Grãos brasileiros, moídos na hora.</p></div><div class="produto-compra"><strong>R$ 8,00</strong><button type="button" data-buy="coado">Comprar</button></div></div></article>
+        <article class="produto"><div class="produto-foto"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=700&q=82" alt="Cappuccino cremoso com arte no leite" loading="lazy"><span>CAFÉS</span></div><div class="produto-info"><div><h3>Cappuccino</h3><p>Espresso, leite vaporizado e canela.</p></div><div class="produto-compra"><strong>R$ 14,00</strong><button type="button" data-buy="cappuccino">Comprar</button></div></div></article>
+        <article class="produto"><div class="produto-foto"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=82" alt="Café gelado com leite e gelo" loading="lazy"><span>CAFÉS</span></div><div class="produto-info"><div><h3>Café gelado</h3><p>Espresso, leite e gelo. Refrescante.</p></div><div class="produto-compra"><strong>R$ 16,00</strong><button type="button" data-buy="gelado">Comprar</button></div></div></article>
+        <article class="produto"><div class="produto-foto"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=82" alt="Fatia de bolo de chocolate com cobertura" loading="lazy"><span>DA VITRINE</span></div><div class="produto-info"><div><h3>Bolo de chocolate</h3><p>Massa fofinha e cobertura cremosa.</p></div><div class="produto-compra"><strong>R$ 14,00</strong><button type="button" data-buy="bolo">Comprar</button></div></div></article>
+        <article class="produto"><div class="produto-foto"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=82" alt="Croissant dourado e folhado" loading="lazy"><span>DA VITRINE</span></div><div class="produto-info"><div><h3>Croissant na manteiga</h3><p>Folhado, douradinho e assado hoje.</p></div><div class="produto-compra"><strong>R$ 13,00</strong><button type="button" data-buy="croissant">Comprar</button></div></div></article>
+        <article class="produto"><div class="produto-foto"><img src="https://d3h1lg3ksw6i6b.cloudfront.net/media/image/2023/08/18/c3ca32650d59428a996f6039a3058860_Po_de_queijo_deu_incia__histria_do_restaurante_A_Baianeira.jpg" alt="Pães de queijo dourados servidos em uma tigela" loading="lazy"><span>DA VITRINE</span></div><div class="produto-info"><div><h3>Pão de queijo</h3><p>Porção com 3 unidades, quentinhas.</p></div><div class="produto-compra"><strong>R$ 9,00</strong><button type="button" data-buy="pao">Comprar</button></div></div></article>
       </div>
-      <div class="pedido"><div class="pedido-texto"><span class="pedido-icone">✳</span><div><h3>Pronto para a sua pausa?</h3><p>Escolha as quantidades e veja o total do seu pedido.</p></div></div><button type="button" onclick="simularCompra()">Simular compra <span aria-hidden="true">↗</span></button></div>
-      <p class="instrucoes">Ao clicar, informe a quantidade de cada produto. Digite 0 para pular um item. <strong>Ganhe 10% de desconto em pedidos a partir de R$ 50,00.</strong></p>
     </section>
+
+    <section class="sobre" id="sobre"><div><p class="etiqueta">UM CANTINHO PARA VOCÊ</p><h2>O café fica melhor<br>quando a gente <em>desacelera.</em></h2></div><p>Na Pausa, a gente acredita que as melhores conversas começam com um café passado na hora. Chegue, escolha sua mesa e fique à vontade.</p></section>
   </main>
 
-  <footer><a class="marca marca-rodape" href="#inicio"><span class="marca-simbolo">P</span> pausa<span>café</span></a><span>Uma pausa feita por <strong>Renef Ricardo Costa da Silva</strong></span><span>© 2026 · FEITO COM CALMA</span></footer>
+  <footer><a class="marca" href="#inicio"><span class="marca-simbolo">P</span> pausa<span>café</span></a><span>Feito torrando café</span><span>© 2026 · FEITO NA BASE DO CAFÉ</span></footer>
+
+  <dialog class="sacola" aria-labelledby="sacola-titulo">
+    <div class="sacola-cabecalho"><div><p class="etiqueta">SUA ESCOLHA</p><h2 id="sacola-titulo">Sua sacola</h2></div><button class="fechar" type="button" data-close-cart aria-label="Fechar sacola">×</button></div>
+    <div class="sacola-itens" data-cart-items><p class="vazio">Sua sacola está vazia. Escolha algo gostoso no cardápio.</p></div>
+    <div class="sacola-total"><span>Total</span><strong data-cart-total>R$ 0,00</strong></div>
+    <p class="sacola-nota">Os itens ficam reservados na sua sacola enquanto você navega.</p>
+    <button class="continuar" type="button" data-close-cart>Continuar escolhendo</button>
+  </dialog>
+  <div class="aviso" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>
