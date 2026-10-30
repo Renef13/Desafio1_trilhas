@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café feito com calma para acompanhar suas pausas.">
+  <title>Pausa Café | Sua pausa favorita</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Pausa Café, início"><span class="marca-simbolo">P</span> pausa<span>café</span></a>
+    <a class="atalho" href="#cardapio">Nosso cardápio <span aria-hidden="true">↘</span></a>
+  </header>
 
+  <main id="inicio">
+    <section class="abertura" aria-labelledby="titulo-principal">
+      <div class="abertura-texto">
+        <p class="etiqueta"><span class="ponto"></span> CAFÉ DE TODO DIA, FEITO COM CARINHO</p>
+        <h1 id="titulo-principal">Um respiro<br>no meio do <em>dia.</em></h1>
+        <p class="intro">Café passado na hora, receitas simples e aquele tempinho que faz bem. Escolha seu favorito e aproveite a pausa.</p>
+        <a class="botao-link" href="#cardapio">Conheça o cardápio <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="ilustracao" aria-hidden="true">
+        <div class="circulo circulo-grande"></div><div class="circulo circulo-pequeno"></div>
+        <div class="selo">feito<br>na hora <span>✳</span></div>
+        <div class="copo"><div class="copo-orelha"></div><div class="copo-corpo"><div class="cafe"></div><div class="vapor vapor-um"></div><div class="vapor vapor-dois"></div><span class="copo-marca">pausa<br><b>café</b></span></div><div class="pires"></div></div>
+      </div>
+      <div class="abertura-rodape"><span>PEQUENOS RITUAIS, GRANDES PAUSAS</span><span>01 — 03</span></div>
+    </section>
+
+    <section class="cardapio" id="cardapio" aria-labelledby="titulo-cardapio">
+      <div class="cabecalho-cardapio"><div><p class="etiqueta">ESCOLHA O SEU MOMENTO</p><h2 id="titulo-cardapio">Nosso <em>cardápio</em></h2></div><p>Três favoritos para deixar<br>o seu dia mais gostoso.</p></div>
+      <div class="produtos">
+        <article class="produto produto-cafe"><div class="produto-arte arte-xicara" aria-hidden="true"><span>01</span><div class="mini-xicara">☕</div></div><div class="produto-info"><div><h3>Café coado</h3><p>Grãos brasileiros, moídos na hora.</p></div><strong>R$ 8,00</strong></div></article>
+        <article class="produto produto-bolo"><div class="produto-arte arte-bolo" aria-hidden="true"><span>02</span><div class="mini-bolo">✳</div></div><div class="produto-info"><div><h3>Bolo de cenoura</h3><p>Com cobertura cremosa de chocolate.</p></div><strong>R$ 12,00</strong></div></article>
+        <article class="produto produto-pao"><div class="produto-arte arte-pao" aria-hidden="true"><span>03</span><div class="mini-pao">◒</div></div><div class="produto-info"><div><h3>Pão de queijo</h3><p>Assado na hora, quentinho e macio.</p></div><strong>R$ 6,00</strong></div></article>
+      </div>
+      <div class="pedido"><div class="pedido-texto"><span class="pedido-icone">✳</span><div><h3>Pronto para a sua pausa?</h3><p>Escolha as quantidades e veja o total do seu pedido.</p></div></div><button type="button" onclick="simularCompra()">Simular compra <span aria-hidden="true">↗</span></button></div>
+      <p class="instrucoes">Ao clicar, informe a quantidade de cada produto. Digite 0 para pular um item. <strong>Ganhe 10% de desconto em pedidos a partir de R$ 50,00.</strong></p>
+    </section>
+  </main>
+
+  <footer><a class="marca marca-rodape" href="#inicio"><span class="marca-simbolo">P</span> pausa<span>café</span></a><span>Uma pausa feita por <strong>Renef Ricardo Costa da Silva</strong></span><span>© 2026 · FEITO COM CALMA</span></footer>
 </body>
 </html>
