@@ -35,7 +35,13 @@ node --test testes.js
 
 ## Captura de tela
 
-A captura ainda não está incluída na pasta do projeto. Quando disponível, salve-a como assets/captura-pagina.png.
+### Página inicial
+
+![Captura da página inicial da Pausa Café](capturas/Captura%20de%20tela%202026-10-30%20014618.png)
+
+### Cardápio
+
+![Captura do cardápio da Pausa Café](capturas/Captura%20de%20tela%202026-10-30%20014641.png)
 
 ## Testes realizados
 
